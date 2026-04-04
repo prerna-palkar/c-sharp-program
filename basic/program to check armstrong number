@@ -1,0 +1,26 @@
+using System;
+
+class Armstrong
+{
+    static void Main()
+    {
+        int num, original, remainder, result = 0;
+
+        Console.Write("Enter number: ");
+        num = Convert.ToInt32(Console.ReadLine());
+
+        original = num;
+
+        while (num != 0)
+        {
+            remainder = num % 10;
+            result += remainder * remainder * remainder;
+            num /= 10;
+        }
+
+        if (original == result)
+            Console.WriteLine("Armstrong Number");
+        else
+            Console.WriteLine("Not Armstrong");
+    }
+}
